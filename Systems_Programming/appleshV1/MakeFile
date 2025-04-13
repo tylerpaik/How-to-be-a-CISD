@@ -1,0 +1,15 @@
+CC = gcc
+CFLAGS = -Wall -g
+SRC = src/main.c src/exec.c
+BIN = applesh
+
+all: $(BIN)
+
+$(BIN): $(SRC)
+	$(CC) $(CFLAGS) -o $(BIN) $(SRC)
+
+run: all
+	./$(BIN)
+
+clean:
+	rm -f $(BIN)
